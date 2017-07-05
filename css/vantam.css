@@ -1,0 +1,7 @@
+.f-ftmn left {
+    width: 99% !important;
+}
+
+#footer .box-it .list-sub > div.f-ftmn:first-child {
+    width: 99% !important;
+}

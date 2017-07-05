@@ -54,6 +54,8 @@
 <meta name="author" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
 <link rel="stylesheet" href="home/css/all.css" type="text/css">
 <link rel="stylesheet" href="home/css/style.css" type="text/css">
+
+<link rel="stylesheet" href="css/vantam.css" type="text/css">
 <!--[if IE 9]>
 	<link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
 <![endif]-->
