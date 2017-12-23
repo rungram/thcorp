@@ -39,85 +39,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<base href="http://<?=$config_url?>/"  />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="icon" href="/Content/home/images/favicon.png" type="image/x-icon"/>
-<meta property="og:title" content="C.ty TNHH PTCNKTTH TRUNG HUY" /> 
-<meta property="og:description" content="C.ty TNHH PTCNKTTH TRUNG HUY" /> 
-<meta property="og:image" content="" /> 
-<meta property="og:video" content=""/>
-<meta name="keywords" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
-<meta name="description" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
-<meta name="keywords" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
-<meta name="author" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
-<link rel="stylesheet" href="home/css/all.css" type="text/css">
-<link rel="stylesheet" href="home/css/style.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="/Content/home/images/favicon.png" type="image/x-icon" />
+    <meta property="og:title" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
+    <meta property="og:description" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
+    <meta property="og:image" content="" />
+    <meta property="og:video" content="" />
+    <meta name="keywords" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
+    <meta name="description" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
+    <meta name="keywords" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
+    <meta name="author" content="C.ty TNHH PTCNKTTH TRUNG HUY" />
+    <link rel="stylesheet" href="home/css/all.css" type="text/css">
+    <link rel="stylesheet" href="home/css/style.css" type="text/css">
+    <!--[if IE 9]>
+        <link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 8]>
+        <link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
+    <![endif]-->
+    <script id="twitter-wjs" src="js/widgets.js"></script>
+    <script type="text/javascript" src="home/js/jquery-1.9.0.js"></script>
+    <script type="text/javascript">
+        var base_url = 'https://www.fpt.com.vn/'; var base_url_lang = 'https://www.fpt.com.vn/vi/'; var lang = 'vi';
+        var text_congnghe = 'C&#244;ng nghệ';
+        var text_vienthong = 'Viễn th&#244;ng';
+        var text_phanphoi_banle = 'Ph&#226;n phối v&#224; b&#225;n lẻ sản phẩm c&#244;ng nghệ';
+        var text_giaoduc = 'Gi&#225;o dục';
+    </script>
 
-<link rel="stylesheet" href="css/vantam.css" type="text/css">
-<!--[if IE 9]>
-	<link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
-<![endif]-->
-<!--[if IE 8]>
-	<link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
-<![endif]-->
-<!--[if IE 7]>
-	<link rel="stylesheet" href="/Content/home/css/cssie.css" type="text/css">
-<![endif]-->
-<script id="twitter-wjs" src="js/widgets.js"></script>
-<script type="text/javascript" src="home/js/jquery-1.9.0.js"></script>
-<script type="text/javascript">
-    var base_url = '<?php echo $config_url1;?>/'; var base_url_lang = '<?php echo $config_url1;?>/'; var lang = 'vi';
-    var text_congnghe = 'Khóa cửa từ';
-    var text_vienthong = 'Camera';
-    var text_phanphoi_banle = 'Đèn LED';
-    var text_giaoduc = 'Máy nước nóng NLMT';
-    var text_giaoduc_test = 'Máy nghiền thực phẩm thải';
-</script>
+    <title>C.ty TNHH PTCNKTTH TRUNG HUY</title>
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
 
-<title>C.ty TNHH PTCNKTTH TRUNG HUY</title>
-<script type="text/javascript">
-    (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r; i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-
-    ga("create", " ", "auto");
-    ga("send", "pageview");
-</script>
-
+        ga("create", " ", "auto");
+        ga("send", "pageview");
+    </script>
 </head>
 <body class="lg_vi">
 
-<div id="fb-root"></div>
-<script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: "875758619167734",
-            status: true,
-            cookie: true,
-            xfbml: true
-        });
-    };
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: "875758619167734",
+                status: true,
+                cookie: true,
+                xfbml: true
+            });
+        };
 
-    (function () {
-        var e = document.createElement("script");
-        e.src = document.location.protocol + "//connect.facebook.net/en_US/all.js";
-        e.async = true;
-        document.getElementById("fb-root").appendChild(e);
-    }());
-</script>
+        (function () {
+            var e = document.createElement("script");
+            e.src = document.location.protocol + "//connect.facebook.net/en_US/all.js";
+            e.async = true;
+            document.getElementById("fb-root").appendChild(e);
+        }());
+    </script>
 
-<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? "http" : "https"; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-<div class="error-ie9">
-	<div>Quý khách vui lòng cập nhật trình duyệt mới nhất (phiên bản IE 10) hoặc dùng trinh duyệt chrome hay firefox truy cập Website C.ty TNHH PTCNKTTH TRUNG HUY<br/>
-Xin cảm ơn quý khách!</div>
-</div>
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? "http" : "https"; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+    <div class="error-ie9">
+        <div>
+            Quý khách vui lòng cập nhật trình duyệt mới nhất (phiên bản IE 10) hoặc dùng trinh duyệt chrome hay firefox truy cập Website C.ty TNHH PTCNKTTH TRUNG HUY<br />
+            Xin cảm ơn quý khách!
+        </div>
+    </div>
 <div id="container">
+    <?php include _template."layout/header.php"; ?>
 	<?php include _template.$template."_tpl.php"; ?> 
+    <a href="javascript: void(0);" class="click-top-scroll">
+        <img class="top-scroll" src="images/top.png" alt="" />
+    </a>
 	<?php include _template."layout/footer.php"; ?>
 	
 </div>

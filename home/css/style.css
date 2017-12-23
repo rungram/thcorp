@@ -1504,7 +1504,7 @@ p {
         }
 
 .box-list-city .ctt-list {
-    width: 600px;
+    width: 350px;
     margin: 0 auto;
     padding-top: 17px;
     padding-bottom: 80px;
@@ -7778,11 +7778,11 @@ div.selector.fixedWidth {
     }
 
 .frame2 {
-    background: url(../../images/bg-f2.jpg) center bottom no-repeat;
+    /*background: url(../../images/bg-f2.jpg) center bottom no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -ms-background-size: 100%;
-    background-size: 100%;
+    background-size: 100%;*/
 }
 
     .frame2 .frame-footer {
@@ -8164,14 +8164,14 @@ img.p-img {
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
     margin: 0 !important;
     background: 0;
-    border-top: 1px solid #fff;
+/*    border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     border-left: 1px solid #fff;
-    opacity: 1;
+*/    opacity: 1;
 }
 
     .swiper-f2 .swiper-pagination-bullet.last-sl {
-        border-right: 1px solid #fff;
+        border-right: 0px solid #fff;
     }
 
     .swiper-f2 .swiper-pagination-bullet:hover, .swiper-f2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -10628,7 +10628,7 @@ table.tb100 td a {
 }
 
     .news_banner.aw .box_banner {
-        max-width: 600px;
+        max-width: 350px;
     }
 
         .news_banner.aw .box_banner .headline {
@@ -20872,7 +20872,7 @@ p {
         }
 
 .box-list-city .ctt-list {
-    width: 600px;
+    width: 350px;
     margin: 0 auto;
     padding-top: 17px;
     padding-bottom: 80px;
@@ -27143,12 +27143,12 @@ div.selector.fixedWidth {
     }
 
 .frame2 {
-    background: url(../../images/bg-f2.jpg) center bottom no-repeat;
+/*    background: url(../../images/bg-f2.jpg) center bottom no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -ms-background-size: 100%;
     background-size: 100%;
-}
+*/}
 
     .frame2 .frame-footer {
         background: url(../../images/f2.png) center bottom no-repeat;
@@ -27539,24 +27539,24 @@ img.p-img {
     font-size: 18px;
     line-height: 0;
     padding: 22px 33px;
-    width: auto;
+    width: auto; 
     border-radius: 0;
     font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
     margin: 0 !important;
-    background: 0;
-    border-top: 1px solid #fff;
+    background: url(../../images/icon.png) left no-repeat; height:35px;
+/*    border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     border-left: 1px solid #fff;
-    opacity: 1;
+*/    opacity: 1;
 }
 
     .swiper-f2 .swiper-pagination-bullet.last-sl {
-        border-right: 1px solid #fff;
+        border-right: 0px solid #fff;
     }
 
     .swiper-f2 .swiper-pagination-bullet:hover, .swiper-f2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        background: #fff;
-        color: #f37021;
+       background: none; border:0px #fff solid; 
+        color: #000; margin:10px; background: url(../../images/icon-ac.png) left no-repeat; height:35px;
     }
 
 table.tb100-fix {
@@ -28185,7 +28185,8 @@ ul.newsticker {
     height: 75%;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; text-align: center;
+	
 }
 
 .container-1280 table td {
@@ -29969,7 +29970,7 @@ table.tb100 td a {
 }
 
     .news_banner.aw .box_banner {
-        max-width: 600px;
+        max-width: 350px;
     }
 
         .news_banner.aw .box_banner .headline {
@@ -32977,7 +32978,7 @@ a:hover .title-shadow {
     color: #000;
 }
 
-@media(max-width:1600px) {
+@media(max-width:1350px) {
     .ivs-holder .item {
         margin-bottom: 15px;
     }
@@ -33246,7 +33247,7 @@ a:hover .title-shadow {
     }
 
     .swiper-f2 .swiper-pagination-bullet {
-        padding: 16px 22px;
+        padding: 16px 32px;
         font-size: 14px;
         line-height: 0;
     }
@@ -38773,7 +38774,7 @@ a:hover .title-shadow {
     }
 }
 
-@media(min-width: 1600px) {
+@media(min-width: 1350px) {
     .slider-f2 .sl4 .point.ptth-p5 {
         margin-left: -565px;
         margin-top: -2px;
@@ -38824,3 +38825,73 @@ a:hover .title-shadow {
         margin-left: -40px;
     }
 }
+
+
+/*Start slider .css*/
+
+.accordian {
+	width: 805px; height: 400px;
+	overflow: hidden;
+	
+	/*Time for some styling*/
+	margin: 160px auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 1200px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 40px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li img {
+	display: block;
+}
+
+/*Image title styles*/
+.image_title {
+	background:#000;
+	position: absolute;
+	left: 0; bottom: 0;	
+width: 640px;	
+
+}
+.text-center{ text-align:center}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+}
+/*End slider.css*/
