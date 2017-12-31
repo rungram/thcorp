@@ -102,6 +102,9 @@ function save_photo(){
 			$data['link'] = $_POST['link'];	
 			$data['id_album'] = $_POST['id_album'];	
 			$data['ten'] = $_POST['ten'];	
+			$data['tenkhongdau'] = changeTitle($_POST['ten']);
+			$data['noidung'] = $_POST['noidung'];
+			$data['loai'] = $_POST['loai'];	
 			$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 			$d->reset();
 			$d->setTable('slideshow');
@@ -115,9 +118,12 @@ function save_photo(){
 						$data['thumb'] = create_thumb($data['photo'], 800,368, _upload_slideshow,$file_name,1);		
 						$data['stt'] = $_POST['stt'.$i];
 						$data['ten'] = $_POST['ten'.$i];	
+						$data['tenkhongdau'] = changeTitle($_POST['ten'.$i]);
 						$data['link'] = $_POST['link'.$i];
 						$data['id_album'] = $_POST['id_album'];												
-						$data['hienthi'] = isset($_POST['hienthi'.$i]) ? 1 : 0;																	
+						$data['hienthi'] = isset($_POST['hienthi'.$i]) ? 1 : 0;												
+						$data['noidung'] = $_POST['noidung'];	
+						$data['loai'] = $_POST['loai'];						
 						$d->setTable('slideshow');
 						if(!$d->insert($data)) transfer("Lưu dữ liệu bị lỗi", "index.php?com=slideshow&act=man_photo");
 					}

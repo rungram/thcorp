@@ -10,11 +10,20 @@
     $tin_l=$d->result_array();
     
     $d->reset();
-    $sql_slider = "select ten,photo,link from #_slideshow order by stt asc";
+    $sql_slider = "select tenkhongdau,id,ten,photo,link from #_slideshow where hienthi = 1 and loai = 1 order by stt asc";
     $d->query($sql_slider);
     $result_slider=$d->result_array();
     
-    
+    $d->reset();
+    $sql_slider_content = "select tenkhongdau,id,ten,photo,link from #_slideshow where hienthi = 1 and loai = 2 order by stt asc";
+    $d->query($sql_slider_content);
+    $result_slider_content=$d->result_array();
+
+    $d->reset();
+    $sql_slider_footer = "select tenkhongdau,id,ten,photo,link from #_slideshow where hienthi = 1 and loai = 3 order by stt asc";
+    $d->query($sql_slider_footer);
+    $result_slider_footer=$d->result_array();
+
     $ngonngu = (!empty($_COOKIE['ngonngu']))?$_COOKIE['ngonngu']:'vn';
 ?>
 <div id="content">
@@ -32,8 +41,9 @@
                     <div class="swiper-container swiper-f1 swiper-container-horizontal swiper-container-fade" id="fr1-homebanner" style="opacity: 1;">
                         <div class="swiper-wrapper" style="transition-duration: 300ms;">
                             <?php  for($i=0,$count_result_slider=count($result_slider);$i<$count_result_slider;$i++){ ?>
+                            <a href="noi-dung-gioi-thieu/<?=$result_slider[$i]["tenkhongdau"]?>-<?=$result_slider[$i]["id"]?>.html" title="">
                                 <div class="swiper-slide slider-home1 slider-home swiper-slide-prev" data-src="<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>" style="width: 1349px; transform: translate3d(0px, 0px, 0px); transition-duration: 300ms; opacity: 1; background-image: url(&quot;<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>&quot;);" data-swiper-slide-index="<?=$i?>">
-                                </div>  
+                                </div>  </a>
                             <?php } ?>  
                         </div>
                     </div>
@@ -226,46 +236,16 @@
                                 The markup will have a list with images and the titles-->
                                 <div class="accordian">
                                     <ul>
+                                    <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                                         <li>
                                             <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
+                                                <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title=""><?= $result_slider_content[$i]['ten'] ?></a>
                                             </div>
-                                            <a href="#">
-                                                <img src="images/1.jpg"/>
+                                            <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title="">
+                                                <img src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>"/>
                                             </a>
                                         </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/8_1439167453_1200x0.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/Cuoc-dua-so-TV.jpg"/>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/fpt-mb.png"/>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/img-cn3.jpg"
-                                            </a>
-                                        </li>
+                                    <?php } ?> 
                                     </ul>
                                 </div>
                                 <!--End-->
@@ -276,46 +256,16 @@
     The markup will have a list with images and the titles-->
                                 <div class="accordian">
                                     <ul>
+                                    <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                                         <li>
                                             <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
+                                                <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title=""><?= $result_slider_content[$i]['ten'] ?></a>
                                             </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" />
+                                            <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title="">
+                                                <img src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>"/>
                                             </a>
                                         </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" />
-                                            </a>
-                                        </li>
+                                    <?php } ?> 
                                     </ul>
                                 </div>
                                 <!--End-->
@@ -326,46 +276,16 @@
     The markup will have a list with images and the titles-->
                                 <div class="accordian">
                                     <ul>
+                                       <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                                         <li>
                                             <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
+                                                <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title=""><?= $result_slider_content[$i]['ten'] ?></a>
                                             </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" />
+                                            <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title="">
+                                                <img src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>"/>
                                             </a>
                                         </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" />
-                                            </a>
-                                        </li>
+                                    <?php } ?> 
                                     </ul>
                                 </div>
                                 <!--End-->
@@ -376,46 +296,16 @@
     The markup will have a list with images and the titles-->
                                 <div class="accordian">
                                     <ul>
+                                        <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                                         <li>
                                             <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
+                                                <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title=""><?= $result_slider_content[$i]['ten'] ?></a>
                                             </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" />
+                                            <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title="">
+                                                <img src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>"/>
                                             </a>
                                         </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" />
-                                            </a>
-                                        </li>
+                                    <?php } ?> 
                                     </ul>
                                 </div>
                                 <!--End-->
@@ -469,9 +359,9 @@
                     </div>
                     <div class="img-bg wr-canvas">
                         <img src="images/fptf4.jpg" alt="">
-                        <div class="it-1 ani-fpt in-view" data-timeout="100"><img class="change-src" data-change-src="/Content/home/images/canvas/cv-20.png" src="images/cv-20.png" alt=""></div>
-                        <div class="it-2 ani-fpt in-view" data-timeout="200"><img class="change-src" data-change-src="/Content/home/images/canvas/cv-21.png" src="images/cv-21.png" alt=""></div>
-                        <div class="it-3 ani-fpt in-view" data-timeout="300"><img class="change-src" data-change-src="/Content/home/images/canvas/cv-22.png" src="images/cv-22.png" alt=""></div>
+                        <?php  for($i=0,$count_result_slider=count($result_slider_footer);$i<$count_result_slider;$i++){ ?>
+                             <div class="it-1 ani-fpt in-view" data-timeout="100"><a href="noi-dung-gioi-thieu/<?=$result_slider_footer[$i]["tenkhongdau"]?>-<?=$result_slider_footer[$i]["id"]?>.html" title=""><img class="change-src" data-change-src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" alt="<?= $result_slider_footer[$i]['ten'] ?>"></a></div>
+                        <?php } ?> 
                     </div>
                     <div class="gr-btn-h">
                         <a href="https://fpt.com.vn/vi/co-hoi-nghe-nghiep" class="btn-home">Tham gia đội ngũ C.ty TNHH PTCNKTTH TRUNG HUY</a>
