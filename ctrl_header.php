@@ -29,7 +29,7 @@
 <script type="text/javascript">
     var base_url = '<?php echo $config_url1;?>/'; var base_url_lang = '<?php echo $config_url1;?>/'; var lang = 'vi';
     var text_congnghe = 'Công nghệ 12';
-    var text_vienthong = 'Viễn thông';
+    var text_vienthong = 'Viễn thông 1';
     var text_phanphoi_banle = 'Ph&#226;n phối v&#224; b&#225;n lẻ sản phẩm c&#244;ng nghệ';
     var text_giaoduc = 'Gi&#225;o dục';
 </script>

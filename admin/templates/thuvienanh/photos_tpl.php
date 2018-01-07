@@ -3,7 +3,6 @@
 <table class="blue_table">
 	<tr>
 		<th style="width:15%;">Số thứ tự</th>  
-        <th style="width:15%;">Tên album ảnh</th>    
 		<th style="width:50%;">Hình ảnh</th>   
 		<th style="width:15%;">Sửa</th>
         <th style="width:15%;">Xóa</th>
@@ -11,12 +10,11 @@
 	<?php for($i=0, $count=count($items); $i<$count; $i++){?>
 	<tr>
 		<td style="width:15%;"><?=$items[$i]['stt']?></td>
-		<td style="width:15%;"><?=$items[$i]['ten_album']?></td>
         <td style="width:50%;">
-       <img src="<?=_upload_thuvienanh.$items[$i]['thumb']?>" />
+       <img src="<?=_upload_thuvienanh.$items[$i]['photo']?>" width="300px"/>
         </td>  
 	
-		<td style="width:15%;"><a href="index.php?com=thuvienanh&act=edit_photo&id=<?=$items[$i]['id']?>"><img src="media/images/edit.png" border="0" /></a></td>
+		<td style="width:15%;"><a href="index.php?com=thuvienanh&act=edit_photo&id=<?=$items[$i]['id']?>&thumb=<?=$items[$i]['thumb']?>"><img src="media/images/edit.png" border="0" /></a></td>
         <td style="width:15%;"><a href="index.php?com=thuvienanh&act=delete_photo&id=<?=$items[$i]['id']?>" onClick="if(!confirm('Xác nhận xóa')) return false;"><img src="media/images/delete.png" border="0" /></a></td>
 	</tr>
 	<?php	}?>

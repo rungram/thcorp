@@ -35,7 +35,8 @@
 		<ul>				
       
          
-         
+          <li><a href="index.php?com=thuvienanhcapcha&act=man_photo">Thư viện album ảnh</a></li>  
+         <li><a href="index.php?com=thuvienanh&act=man_photo">Thư viện ảnh</a></li> 
           <li><a href="index.php?com=slideshow&act=man_photo">Quản lý hình ảnh slideshow</a></li>
 		  <li><a href="index.php?com=banner&act=man_photo">Quảng cáo bên slide </a></li>
          

@@ -44,8 +44,9 @@
                     <div class="swiper-container swiper-f1 swiper-container-horizontal swiper-container-fade" id="fr1-homebanner" style="opacity: 1;">
                         <div class="swiper-wrapper" style="transition-duration: 300ms;">
                             <?php  for($i=0,$count_result_slider=count($result_slider);$i<$count_result_slider;$i++){ ?>
+                            <a href="noi-dung-gioi-thieu/<?=$result_slider[$i]["tenkhongdau"]?>-<?=$result_slider[$i]["id"]?>.html" title="">
                                 <div class="swiper-slide slider-home1 slider-home swiper-slide-prev" data-src="<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>" style="width: 1349px; transform: translate3d(0px, 0px, 0px); transition-duration: 300ms; opacity: 1; background-image: url(&quot;<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>&quot;);" data-swiper-slide-index="<?=$i?>">
-                                </div> 
+                                </div>  </a>
                             <?php } ?>  
                         </div>
                     </div>
@@ -132,203 +133,22 @@
                 <div class="frame-screen frame2">
                     <div class="swiper-f2 swiper-container-horizontal swiper-container-fade">
                         <ul class="slider-f2 swiper-wrapper" style="transition-duration: 0ms;">
-                            <li class="sl1 swiper-slide" style="width: 1349px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
-
-                                <!--Begin-->
-                                <!-- We will make a simple accordian with hover effects
-                                The markup will have a list with images and the titles-->
-                                <div class="accordian">
-                                    <ul>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/1.jpg"/>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/8_1439167453_1200x0.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/Cuoc-dua-so-TV.jpg"/>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/fpt-mb.png"/>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="images/img-cn3.jpg"/>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End-->
-                            </li>
-                            <li class="sl2 swiper-slide swiper-slide-prev" style="width: 1349px; opacity: 1; transform: translate3d(-1349px, 0px, 0px); transition-duration: 0ms;">
+                            <li class="sl2 swiper-slide" style="width: 1349px; opacity: 1; transform: translate3d(-1349px, 0px, 0px); transition-duration: 0ms;">
                                 <!--Begin-->
                                 <!-- We will make a simple accordian with hover effects
     The markup will have a list with images and the titles-->
                                 <div class="accordian">
                                     <ul>
+                                    <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                                         <li>
                                             <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
+                                                <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title=""><?= $result_slider_content[$i]['ten'] ?></a>
                                             </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" />
+                                            <a href="noi-dung-gioi-thieu/<?=$result_slider_content[$i]["tenkhongdau"]?>-<?=$result_slider_content[$i]["id"]?>.html" title="">
+                                                <img src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>"/>
                                             </a>
                                         </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End-->
-                            </li>
-                            <li class="sl3 swiper-slide swiper-slide-visible swiper-slide-active" style="width: 1349px; opacity: 1; transform: translate3d(-2698px, 0px, 0px); transition-duration: 0ms;">
-                                <!--Begin-->
-                                <!-- We will make a simple accordian with hover effects
-    The markup will have a list with images and the titles-->
-                                <div class="accordian">
-                                    <ul>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--End-->
-                            </li>
-                            <li class="sl4 swiper-slide swiper-slide-next" style="width: 1349px; opacity: 0; transform: translate3d(-4047px, 0px, 0px); transition-duration: 0ms;">
-                                <!--Begin-->
-                                <!-- We will make a simple accordian with hover effects
-    The markup will have a list with images and the titles-->
-                                <div class="accordian">
-                                    <ul>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 1</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/3yiC6Yq.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 2</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/40Ly3VB.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 3</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/00kih8g.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 4</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/2rT2vdx.jpg" />
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="image_title">
-                                                <a href="#">Tiêu đề hình ảnh 5</a>
-                                            </div>
-                                            <a href="#">
-                                                <img src="http://thecodeplayer.com/uploads/media/8k3N3EL.jpg" />
-                                            </a>
-                                        </li>
+                                    <?php } ?> 
                                     </ul>
                                 </div>
                                 <!--End-->
@@ -342,7 +162,11 @@
                                             <div class="wr-page text-center">
                                                 <p class="t1 f-dax">Chúng tôi cung cấp giải pháp CNTT tổng thể bao gồm</p>
                                                 <p class="t2 f-dax-b">Hạ tầng - Thiết bị - Phần mềm - Dịch vụ</p>
-                                                <div class="swiper-pagination-f2 swiper-pagination-clickable"><span class="swiper-pagination-bullet first-sl">Công nghệ</span><span class="swiper-pagination-bullet swiper-pagination-bullet-active">Viễn thông</span><span class="swiper-pagination-bullet">Phân phối và bán lẻ sản phẩm công nghệ</span><span class="swiper-pagination-bullet last-sl">Giáo dục 1</span></div>
+                                                <div class="swiper-pagination-f2 swiper-pagination-clickable">
+                                                <?php  for($i=0,$count_result_img=count($result_image);$i<$count_result_img;$i++){ ?>
+                                                      <span class="swiper-pagination-bullet"><?= $result_image[$i]['thumb'] ?></span>
+                                                <?php } ?>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
@@ -383,7 +207,7 @@
                     <div class="img-bg wr-canvas">
                         <img src="images/fptf4.jpg" alt="">
                         <?php  for($i=0,$count_result_slider=count($result_slider_footer);$i<$count_result_slider;$i++){ ?>
-                             <div class="it-1 ani-fpt in-view" data-timeout="100"><img class="change-src" data-change-src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" alt="<?= $result_slider_footer[$i]['ten'] ?>"></div>
+                             <div class="it-1 ani-fpt in-view" data-timeout="100"><a href="noi-dung-gioi-thieu/<?=$result_slider_footer[$i]["tenkhongdau"]?>-<?=$result_slider_footer[$i]["id"]?>.html" title=""><img class="change-src" data-change-src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" alt="<?= $result_slider_footer[$i]['ten'] ?>"></a></div>
                         <?php } ?> 
                     </div>
                     <div class="gr-btn-h">
