@@ -28,11 +28,6 @@
     $sql_image_thumb = "select * from #_thuvienanhcapcha order by stt asc";
     $d->query($sql_image_thumb);
     $result_image=$d->result_array();
-
-    $d->reset();
-    $sql_tintuc_list = "select * from #_tinloai1_1_list order by stt asc";
-    $d->query($sql_tintuc_list);
-    $result_tintuc_list=$d->result_array();
 ?>
 <div id="content">
             <script type="text/javascript">
@@ -59,7 +54,6 @@
                         <div class="wr-page">
                             <div class="swiper-frame swiper-container-horizontal">
                                 <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-4px, 0px, 0px);">
-                                <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                                     <div class="swiper-slide swiper-slide-active">
                                         <div class="col1">
                                             <table class="tb100-fix">
@@ -69,10 +63,10 @@
                                                             <table class="fix-as">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td><img class="left" src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>" alt="<?= $result_slider_content[$i]['ten'] ?>"></td>
+                                                                        <td><img class="left" src="images/ico1.png" alt=""></td>
                                                                         <td>
                                                                             <div class="text left">
-                                                                                <?= $result_slider_content[$i]['ten'] ?>
+                                                                                <p class="t1 f-dax">Doanh thu 2015</p><p class="t2 avb">40.003</p><p class="t3">tỷ VND</p>
                                                                             </div>
                                                                         </td>
                                                                     </tr>
@@ -84,7 +78,109 @@
                                             </table>
                                         </div>
                                     </div>
-                                <?php } ?> 
+                                    <div class="swiper-slide swiper-slide-next">
+                                        <div class="col2">
+                                            <table class="tb100-fix">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><img class="left" src="images/ico2.png" alt=""></td>
+                                                                        <td>
+                                                                            <div class="text left">
+                                                                                <p class="t1 f-dax">Giá trị vốn hóa</p><p class="t2 avb">19.197<sup>+</sup></p><p class="t3">tỷ VND</p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="col3">
+                                            <table class="tb100-fix">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><img class="left" src="images/ico3.png" alt=""></td>
+                                                                        <td>
+                                                                            <div class="text left">
+                                                                                <p class="t1 f-dax">Quy mô nhân sự</p><p class="t2 avb">27.900<sup>+</sup></p><p class="t3">người</p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="col4">
+                                            <table class="tb100-fix">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="left" src="images/ico4.png" alt="">
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text left">
+                                                                                <p class="t1 f-dax">Hiện diện</p><p class="t2 avb">20<!--20--> <span style="font-size:14px;">tại</span></p><p class="t3">quốc gia</p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="col5">
+                                            <table class="tb100-fix">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <img class="left" src="images/ico5.png" alt="">
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text left">
+                                                                                <p class="t1"><span class="avb">04</span></p>
+                                                                                <p class="t2">lĩnh vực</p>
+                                                                                <p class="t2">kinh doanh</p>
+                                                                                <p class="t3">cốt lõi</p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -345,11 +441,7 @@
                                             <div class="wr-page text-center">
                                                 <p class="t1 f-dax">Chúng tôi cung cấp giải pháp CNTT tổng thể bao gồm</p>
                                                 <p class="t2 f-dax-b">Hạ tầng - Thiết bị - Phần mềm - Dịch vụ</p>
-                                                <div class="swiper-pagination-f2 swiper-pagination-clickable">
-                                                <?php  for($i=0,$count_tintuc_list=count($result_tintuc_list);$i<$count_tintuc_list;$i++){ ?>
-                                                    <span class="swiper-pagination-bullet first-sl"><?= $result_tintuc_list[$i]['ten_vi'] ?></span>
-                                                <?php } ?>
-                                                </div>
+                                                <div class="swiper-pagination-f2 swiper-pagination-clickable"><span class="swiper-pagination-bullet first-sl">Công nghệ</span><span class="swiper-pagination-bullet swiper-pagination-bullet-active">Viễn thông</span><span class="swiper-pagination-bullet">Phân phối và bán lẻ sản phẩm công nghệ</span><span class="swiper-pagination-bullet last-sl">Giáo dục 1</span></div>
                                             </div>
                                         </td>
                                     </tr>
@@ -438,7 +530,6 @@
                 <div class="infographic-mb">
                     <div class="swiper-frame-mb">
                         <div class="swiper-wrapper">
-                        <?php  for($i=0,$count_result_slider=count($result_slider_content);$i<$count_result_slider;$i++){ ?>
                             <div class="swiper-slide">
                                 <div class="col1">
                                     <table class="tb100">
@@ -446,9 +537,9 @@
                                             <tr>
                                                 <td>
                                                     <div class="wrap-mb">
-                                                        <img class="" src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>" alt="" />
+                                                        <img class="" src="images/ico1.png" alt="" />
                                                         <div class="text">
-                                                            <?= $result_slider_content[$i]['ten'] ?>
+                                                            <p class="t1 f-dax">Doanh thu 2015</p><p class="t2 avb">40.003</p><p class="t3 f-dax-b">tỷ đồng</p>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -457,7 +548,83 @@
                                     </table>
                                 </div>
                             </div>
-                        <?php } ?> 
+                            <div class="swiper-slide">
+                                <div class="col2">
+                                    <table class="tb100">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="wrap-mb">
+                                                        <img class="" src="images/ico2.png" alt="" />
+                                                        <div class="text ">
+                                                            <p class="t1 f-dax">Giá trị vốn hóa</p> <p class="t2 avb">19.197</p>                                                <p class="t3 f-dax-b">tỷ đồng</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col3">
+                                    <table class="tb100">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="wrap-mb">
+                                                        <img class="" src="images/ico3.png" alt="" />
+                                                        <div class="text ">
+                                                            <p class="t1 f-dax">Quy mô nhân sự</p><p class="t2 avb">26.800<sup>+</sup></p><p class="t3 f-dax-b">người</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col4">
+                                    <table class="tb100">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="wrap-mb">
+                                                        <img class="" src="images/ico4.png" alt="" />
+                                                        <div class="text ">
+                                                            <p class="t1 f-dax">Hiện diện tại</p>
+                                                            <p class="t2 avb">19</p>
+                                                            <p class="t3 f-dax-b">quốc gia</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="col5">
+                                    <table class="tb100">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="wrap-mb">
+                                                        <img class="" src="images/ico5.png" alt="" />
+                                                        <div class="text lvkd">
+                                                            <p class="t1"><span class="avb">04</span></p>
+                                                            <p class="t2">lĩnh vực</p>
+                                                            <p class="t2">kinh doanh</p>
+                                                            <p class="t3">cốt lõi</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
