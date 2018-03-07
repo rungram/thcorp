@@ -10,7 +10,6 @@
 			$result_detail=$d->fetch_array();
 			$id_list = $result_detail['id_list'];
 			
-			
 			$d->reset();
 			$sql_tinlq="select * from #_tinloai1_1 where  id<>'$id' and id_list = '$id_list' limit 0,3 ";
 			$d->query($sql_tinlq);	

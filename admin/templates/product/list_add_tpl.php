@@ -25,6 +25,25 @@
 	<?php	
 		}
 	?>	
+	</select><br/><br/>
+	<b>Vị trí </b>
+	<select name="vitri" id="vitri" class="main_font">
+	<?php 
+		if($item['vitri']==2)
+		{
+	?>
+		<option value="1">Top</option>	
+		<option value="2" selected="selected">Bottom</option>
+	<?php
+		}
+		else 
+		{
+	?>
+		<option value="1">Top</option>	
+		<option value="2">Bottom</option>
+	<?php	
+		}
+	?>	
 	</select><br/>
 	<input type="hidden" name="id" id="id" value="<?=@$item['id']?>" />
 	<input type="submit" value="Lưu" class="btn" />

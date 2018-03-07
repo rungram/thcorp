@@ -779,6 +779,7 @@ function save_list(){
 		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['stt'] = $_POST['stt'];
 		$data['menutype'] = $_POST['menutype'];
+		$data['vitri'] = $_POST['vitri'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaysua'] = time();
 		
@@ -797,6 +798,7 @@ function save_list(){
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaytao'] = time();
 		$data['menutype'] = $_POST['menutype'];
+		$data['vitri'] = $_POST['vitri'];
 		$data['noidung_vi'] = addslashes($_POST['noidung_vi']);
 		$d->setTable('product_list');
 		if($d->insert($data))

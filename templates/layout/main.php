@@ -33,6 +33,24 @@
     $sql_tintuc_list = "select * from #_tinloai1_1_list order by stt asc";
     $d->query($sql_tintuc_list);
     $result_tintuc_list=$d->result_array();
+
+    $d->reset();
+    $sql_list ="select *  from #_product_list";
+    $d->query($sql_list);
+    $list =$d->result_array();
+
+    $_tintuc_list = array();
+    for($i=0,$count_l=count($list);$i<$count_l;$i++)
+    {
+        if($list[$i]['menutype']=='1')
+        {
+            $_tintuc_list[] = $list[$i]["id"];
+        }
+    }
+    $array = implode("','",$_tintuc_list);
+    $sql_tinl="select * from #_product where hienthi =1 and id_list in ('".$array."') order by id desc";
+    $d->query($sql_tinl);   
+    $result_tinl=$d->result_array();    
 ?>
 <div id="content">
             <script type="text/javascript">
@@ -100,29 +118,17 @@
                                     <div class="mask">
                                         <ul id="webticker" class="newsticker" style="width: 3456px; transition-duration: 7.04286s; left: -493px;">
                                             <!-- <div class="for-nwidth"> -->
+                                        <?php for($i=0,$count_tl=count($result_tinl);$i<$count_tl;$i++)
+                                          { 
+                                          ?>
+                                          <li class="news-animate r ">
+                                                <a href="tin-tuc-detail/<?=$result_tinl[$i]["tenkhongdau"]?>-<?=$result_tinl[$i]["id"]?>.html" title="<?=$result_tinl[$i]["ten_vi"]?>"><?=$result_tinl[$i]["ten_vi"]?></a>
+                                            </li>
+                                          <?php
+                                          }
+                                          ?>
 
 
-
-
-
-                                            <li class="news-animate r ">
-                                                <a href="chi-tiet.html" title="Bát Tràng: Thổi hồn xưa gạch Việt">Bát Tràng: Thổi hồn xưa gạch Việt</a>
-                                            </li>
-                                            <li class="news-animate r hide-mb">
-                                                <a href="https://fpt.com.vn/vi/tin-tuc/chi-tiet/loi-nhuan-sau-thue-11-thang-tang-9-so-voi-cung-ky" title="Lợi nhuận sau thuế 11 tháng tăng 9% so với cùng kỳ ">Lợi nhuận sau thuế 11 tháng tăng 9% so với cùng kỳ </a>
-                                            </li>
-                                            <li class="news-animate r hide-mb">
-                                                <a href="#" title="AHNĐ-MDOT023">AHNĐ-MDOT023</a>
-                                            </li>
-                                            <li class="news-animate r ">
-                                                <a href="#" title="Loại vật liệu này giờ đây đang bị mai một dần vì những nghệ nhân Bát Tràng không còn đốt lò như xưa.">Loại vật liệu này giờ đây đang bị mai một dần vì những nghệ nhân Bát Tràng không còn đốt lò như xưa.</a>
-                                            </li>
-                                            <li class="news-animate r ">
-                                                <a href="https://fpt.com.vn/vi/tin-tuc/chi-tiet/voi-hon-200-chung-chi-fpt-software-duoc-chung-nhan-dac-biet-tu-aws" title="Với hơn 200 chứng chỉ FPT Software được chứng nhận đặc biệt từ AWS ">Với hơn 200 chứng chỉ FPT Software được chứng nhận đặc biệt từ AWS </a>
-                                            </li>
-                                            <li class="news-animate r ">
-                                                <a href="https://fpt.com.vn/vi/tin-tuc/chi-tiet/fpt-software-phat-trien-ung-dung-nhac-so-cho-doi-tac-tai-philippines" title="FPT Software phát triển ứng dụng nhạc số cho đối tác tại Philippines ">FPT Software phát triển ứng dụng nhạc số cho đối tác tại Philippines </a>
-                                            </li>
                                         </ul><span class="tickeroverlay-left">&nbsp;</span><span class="tickeroverlay-right">&nbsp;</span>
                                     </div>
                                 </div>

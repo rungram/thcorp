@@ -1,5 +1,4 @@
 <?php 
-         
 			$d->reset();
 			$id =  addslashes($_GET['id']);
 			$sql_tinl="select * from #_product where hienthi =1 and id_cat='".$id."' order by id desc";
