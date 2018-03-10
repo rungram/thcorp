@@ -22,7 +22,11 @@
 			$maxP=5;
 			$paging=paging_home($result_spnam , $url, $curPage, $maxR, $maxP);
 			$result_spnam=$paging['source'];
-            
+			
+			$d->reset();
+			$sql_tungdanhmuc="select * from #_product_item where hienthi =1 and id_cat='$id'  order by stt asc";
+			$d->query($sql_tungdanhmuc);
+			$result_spcat=$d->result_array();
 			
 			$total_sp = count($result_spnam);
 ?>
@@ -85,32 +89,76 @@
 		<div class="swiper-button-next"></div> -->
 	</div>
 </div>
-
+<script type="text/javascript">
+  function ajaxordernoibat(value) {
+      $.ajax({
+          type   : "POST",
+          url    : "ajaxordernoibatcat_tpl.php",
+          data   : {id: <?=$id?>, value: value, url: '<?=$url?>'},
+          success: function (data) {
+            $(".content-newspage").html(data);
+          }
+      });
+  }
+  function ajaxordercat(value) {
+      $.ajax({
+          type   : "POST",
+          url    : "ajaxordercatcat_tpl.php",
+          data   : {id: <?=$id?>, value: value, url: '<?=$url?>'},
+          success: function (data) {
+            $(".content-newspage").html(data);
+          }
+      });
+  }
+  function ajaxorderper(value) {
+      $.ajax({
+          type   : "POST",
+          url    : "ajaxorderpercat_tpl.php",
+          data   : {id: <?=$id?>, value: value, url: '<?=$url?>'},
+          success: function (data) {
+            $(".content-newspage").html(data);
+          }
+      });
+  }
+  function ajaxordersearch() {
+	  var value =  $("#searchtext").val();
+      $.ajax({
+          type   : "POST",
+          url    : "ajaxordersearchcat_tpl.php",
+          data   : {id: <?=$id?>, value: value, url: '<?=$url?>'},
+          success: function (data) {
+            $(".content-newspage").html(data);
+          }
+      });
+  }
+</script>
 <!-- content home -->
 
 <div class="wrap">
   <div class="wr-page">
     <div class="news_wrap h">
       <div class="box_dropdown">
-        <form action="https://www.fpt.com.vn/vi/nhadautu/tin-tuc-nha-dau-tu" method="get" id="frmSearchNews">
           <div class="sb_1">
-            <select class="sbox irchange" name="sort" id="_sort">
-              <option value="" >Mới nhất</option>
-              <option value="hot" >Nổi bật</option>
-              <option value="view" >Xem nhiều</option>
+            <select onchange="ajaxordernoibat(this.value)" class="sbox irchange" name="sort" id="_sort">
+              <option value="0" >--Chọn--</option>
+              <option value="1" >Mới nhất</option>
+              <option value="2" >Xem nhiều</option>
             </select>
             <div class="icon-srr-fk"></div>
           </div>
           <div class="sb_1">
-            <select class="sbox irchange" name="category" id="_cid">
+            <select onchange="ajaxordercat(this.value)" class="sbox irchange" name="category" id="_cid">
               <option value="">Tất cả</option>
+              <?php for($i=0,$count_spnam=count($result_spcat);$i<$count_spnam;$i++) { ?>
+                <option value="<?=$result_spcat[$i]['id']?>"><?=$result_spcat[$i]['ten_vi']?></option>
+                <?php }?>
             </select>
             <div class="icon-srr-fk"></div>
           </div>
           <div class="sb_1 sb_nu">
             <div class="span">Số tin hiển thị</div>
             <div class="fix-select">
-              <select class="sbox qtychange" name="per" id="_per">
+              <select onchange="ajaxorderper(this.value)" class="sbox qtychange" name="per" id="_per">
                 <option value="12" >12</option>
                 <option value="16" >16</option>
                 <option value="20" >20</option>
@@ -121,10 +169,9 @@
             <div class="icon-srr-fk"></div>
           </div>
           <div class="search-related r right">
-            <input type="text" name="q" id="_searchText" placeholder="T&#236;m kiếm tin tức" value="" />
-            <input type="submit" class="submit" value="&nbsp;" id="_submit" />
+            <input type="text" name="searchtext" id="searchtext" placeholder="" value="" />
+            <input onclick="ajaxordersearch()" type="submit" class="submit" value="&nbsp;" />
           </div>
-        </form>
         <div class="clearfix"></div>
       </div>
       <div class="content-newspage">
@@ -183,26 +230,6 @@
 					// k scroll
 				}
 			}
-			$(document).on("change", ".irchange", function () {
-			    $('#_submit').trigger('click');
-			});
-
-			$(document).on("change", ".qtychange", function () {
-			    $('#_submit').trigger('click');
-			});
-
-			$(document).on("submit", "#frmSearchNews", function (e) {
-			    //console.log('submit form');
-			    e.preventDefault();
-			    $('#_submit').trigger('click');
-			    return false;
-			});
-
-			$(document).on("click", "#_submit", function (e) {
-			    e.preventDefault();
-			    searchNews(0, 1, 12);
-			    return false;
-			});
         });
     });
 
