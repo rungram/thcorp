@@ -1,5 +1,5 @@
 <?php 
-            $id =  addslashes($_GET['id']);
+      $id =  addslashes($_GET['id']);
 			$d->reset();
 			$sql_tungdanhmuc="select * from #_product where hienthi =1 and id_list='$id'  order by stt asc";
 			$d->query($sql_tungdanhmuc);	
@@ -83,17 +83,28 @@
 </div>
 
 <!-- content home -->
-
+<script type="text/javascript">
+  function ajaxordernoibat(value) {
+      $.ajax({
+          type   : "POST",
+          url    : "ajaxordernoibat_tpl.php",
+          data   : {id: <?=$id?>, value: value, url: '<?=$url?>'},
+          success: function (data) {
+            alert(data);
+            $(".content-newspage").html(data);
+          }
+      });
+  }
+</script>
 <div class="wrap">
   <div class="wr-page">
     <div class="news_wrap h">
       <div class="box_dropdown">
-        <form action="https://www.fpt.com.vn/vi/nhadautu/tin-tuc-nha-dau-tu" method="get" id="frmSearchNews">
+        <form action="" method="get" id="frmSearchNews">
           <div class="sb_1">
-            <select class="sbox irchange" name="sort" id="_sort">
-              <option value="" >Mới nhất</option>
-              <option value="hot" >Nổi bật</option>
-              <option value="view" >Xem nhiều</option>
+            <select onchange="ajaxordernoibat(this.value)" class="sbox irchange" name="sort" id="_sort">
+              <option value="1" >Mới nhất</option>
+              <option value="2" >Xem nhiều</option>
             </select>
             <div class="icon-srr-fk"></div>
           </div>
@@ -139,7 +150,7 @@
                   <div class="tt-mobile"> <a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" class="ttn b"> <?=$result_spnam[$i]["ten_vi"]?></a> </div>
                   <a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" title="Lợi nhuận sau thuế 11 th&#225;ng tăng 9% so với c&#249;ng kỳ">
                   <div class="images-news"> <img class="img-news" src="upload/sanpham/<?php if($result_spnam[$i]["tc_big"]==1) echo $result_spnam[$i]["thumb"]; else echo $result_spnam[$i]["thumb"] ?>" alt="<?=$result_spnam[$i]["ten_vi"]?>" />
-                    <div class="date-ab"><?=$result_spnam[$i]["ngaytao"]?></div>
+                    <div class="date-ab"><p class="desc r"><?=$result_spnam[$i]["ten_vi"]?></p></div>
                   </div>
                   </a>
                   <div class="text-info"> <a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" class="ttn b"><?=$result_spnam[$i]["ten_vi"]?></a>
@@ -179,41 +190,23 @@
 					// k scroll
 				}
 			}
-			$(document).on("change", ".irchange", function () {
-			    $('#_submit').trigger('click');
-			});
 
-			$(document).on("change", ".qtychange", function () {
-			    $('#_submit').trigger('click');
-			});
 
-			$(document).on("submit", "#frmSearchNews", function (e) {
-			    //console.log('submit form');
-			    e.preventDefault();
-			    $('#_submit').trigger('click');
-			    return false;
-			});
-
-			$(document).on("click", "#_submit", function (e) {
-			    e.preventDefault();
-			    searchNews(0, 1, 12);
-			    return false;
-			});
         });
     });
 
-    function searchNews(cid, page, perpage) {
-        $.post("https://www.fpt.com.vn/vi/nhadautu/tin-tuc-nha-dau-tu", {
-            page: page,
-            perpage: $('#_per').val(),
-            search_text: $("#_searchText").val(),
-            category: $("#_cid").val(),
-            sort: $('#_sort').val()
-        }, function (e) {
-            $("#news_wrap").html(e);
-            $('html, body').animate({scrollTop:$('.content-newspage').position().top - 70}, 1500);
-        })
-    }
+    // function searchNews(cid, page, perpage) {
+    //     $.post("https://www.fpt.com.vn/vi/nhadautu/tin-tuc-nha-dau-tu", {
+    //         page: page,
+    //         perpage: $('#_per').val(),
+    //         search_text: $("#_searchText").val(),
+    //         category: $("#_cid").val(),
+    //         sort: $('#_sort').val()
+    //     }, function (e) {
+    //         $("#news_wrap").html(e);
+    //         $('html, body').animate({scrollTop:$('.content-newspage').position().top - 70}, 1500);
+    //     })
+    // }
 </script>
 </div>
 <a href="javascript: void(0);" class="click-top-scroll"> <img class="top-scroll" src="images/top.png" alt="" /> </a>

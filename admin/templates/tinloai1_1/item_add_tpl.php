@@ -138,6 +138,53 @@ function get_main_cat()
     <b>Số thứ tự</b> <input type="text" name="stt" value="<?=isset($item['stt'])?$item['stt']:1?>" style="width:30px"><br>
     <br />  
    	<b>Hiển thị</b> <input type="checkbox" name="hienthi" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?>><br /> 
+   	<b>Vị trí </b>
+    <select name="vitri" id="vitri" class="main_font">
+    <?php
+    	if($item['vitri']==1)
+    	{
+	?>
+			<option value="0">--Chọn--</option>	
+			<option value="1" selected="selected">Định hướng công ty</option>	
+			<option value="2">Tuyển dụng</option>
+			<option value="3">Footer</option>
+	<?php
+    	}
+    ?>
+	<?php
+    	if($item['vitri']==2)
+    	{
+	?>
+			<option value="0">--Chọn--</option>	
+			<option value="1">Định hướng công ty</option>	
+			<option value="2" selected="selected">Tuyển dụng</option>
+			<option value="3">Footer</option>
+	<?php
+    	}
+    ?>
+    <?php
+    	if($item['vitri']==3)
+    	{
+	?>
+			<option value="0">--Chọn--</option>	
+			<option value="1">Định hướng công ty</option>	
+			<option value="2">Tuyển dụng</option>
+			<option value="3" selected="selected">Footer</option>
+	<?php
+    	}
+    ?>
+    <?php
+    	if(empty($item['vitri']))
+    	{
+	?>
+			<option value="0">--Chọn--</option>	
+			<option value="1">Định hướng công ty</option>	
+			<option value="2">Tuyển dụng</option>
+			<option value="3">Footer</option>
+	<?php
+    	}
+    ?>
+	</select><br/>
 	<input type="hidden" name="id" id="id" value="<?=@$item['id']?>" />
 	<input type="submit" value="Lưu" class="btn" />
 	<input type="button" value="Thoát" onclick="javascript:window.location='index.php?com=tinloai1_1&act=man'" class="btn" />

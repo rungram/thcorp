@@ -118,6 +118,7 @@ $result_cungmauc = $d->result_array();
 					</div>
 					<div class="clear"></div>
 				</div>
+				<center><img class="img-news" src="upload/sanpham/<?php if($chitiet_sp["tc_big"]==1) echo $chitiet_sp["thumb"]; else echo $chitiet_sp["thumb"] ?>" alt="<?=$chitiet_sp["ten_vi"]?>" /></center>
 				<div class="content">
 					<p style="text-align:justify"><?=$chitiet_sp['mota_en']?></p>
 

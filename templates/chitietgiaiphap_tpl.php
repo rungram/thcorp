@@ -9,9 +9,10 @@
 			$d->query($sql_detail);	
 			$result_detail=$d->fetch_array();
 			$id_list = $result_detail['id_list'];
+			$vitri = $result_detail['vitri'];
 			
 			$d->reset();
-			$sql_tinlq="select * from #_tinloai1_1 where  id<>'$id' and id_list = '$id_list' limit 0,3 ";
+			$sql_tinlq="select * from #_tinloai1_1 where  id<>'$id' and id_list = '$id_list' and hienthi = 1 and vitri = '$vitri' limit 0,3 ";
 			$d->query($sql_tinlq);	
 			$result_tinlq=$d->result_array();
 			
@@ -78,7 +79,7 @@
 			</div>
             
 			
-				<div class="box_list">
+				<div class="box_list" style="float: right;width: 30%;">
 					<div class="news_headline green">
 						<span class="title">Tin liên quan</span>
 					</div>
@@ -87,10 +88,10 @@
 					   for ($i = 0; $i < count($result_tinlq); $i++) 
 					   {
 					?>
-					<div class="item">
+					<div class="item" style="padding-bottom: 10px">
 				        <a href="chi-tiet-giai-phap/<?=$result_tinlq[$i]["tenkhongdau"]?>-<?=$result_tinlq[$i]["id"]?>.html" title=""><img src="upload/tinloai1_1/<?=$result_tinlq[$i]["thumb"]?>" alt="<?=$result_tinlq[$i]["ten_vi"]?>" title="<?=$result_tinlq[$i]["ten_vi"]?>"></a>
 				        <div class="text">
-					        <div><a href="tin-tuc-detail/<?=$result_tinlq[$i]["tenkhongdau"]?>-<?=$result_tinlq[$i]["id"]?>.html" title=""><?=$result_tinlq[$i]["ten_vi"]?></a></div>
+					        <div><a href="chi-tiet-giai-phap/<?=$result_tinlq[$i]["tenkhongdau"]?>-<?=$result_tinlq[$i]["id"]?>.html" title=""><?=$result_tinlq[$i]["ten_vi"]?></a></div>
 				        </div>
 				        <div class="clear"></div>
 			        </div>

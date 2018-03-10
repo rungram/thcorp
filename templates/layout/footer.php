@@ -8,6 +8,11 @@ $d->reset();
 $sql_face = "select* from #_nhung_face";
 $d->query($sql_face);
 $result_face=$d->result_array();
+
+$d->reset();
+$sql_tinll_name="select * from #_tinloai1_1 where vitri=3 and hienthi = 1 order by stt";
+$d->query($sql_tinll_name); 
+$result_tinll=$d->result_array();   
 ?>
 <div id="footer">
             <!-- <div class="share pa">
@@ -47,11 +52,21 @@ $result_face=$d->result_array();
                 </div>
                 <div class="link">
                     <a href="//<?=$result_face[0]['facebook']?>" target="_blank" class="share ic-fb">&nbsp;</a>
-                    <a target="_blank" href="../<?=$result_face[0]['youtube']?>" class="share ic-ytb">&nbsp;</a>
-                    <a target="_blank" href="index.html" class="" title="">Điều khoản sử dụng</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a target="_blank" href="index.html" class="" title="">Sơ đồ website</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="index.html" class="" title="">Liên hệ &amp; Trợ giúp</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="index.html" title="" target="_blank">Thương hiệu</a>
+                    <a target="_blank" href="//<?=$result_face[0]['youtube']?>" class="share ic-ytb">&nbsp;</a>
+                    <?php for($i=0,$count_tl=count($result_tinll);$i<$count_tl;$i++){
+                    ?>
+                    <a target="_blank" href="chi-tiet-giai-phap/<?=$result_tinll[$i]["tenkhongdau"]?>-<?=$result_tinll[$i]["id"]?>.html" class="" title=""><?=$result_tinll[$i]["ten_vi"]?></a>
+                    <?php
+                        if($i<$count_tl-1)
+                        {
+                    ?>
+                            &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <?php
+                        }
+                    ?>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="bottom-ft-mb">
                     <a href="index.html" target="_blank" class="share ic-fb">&nbsp;</a>

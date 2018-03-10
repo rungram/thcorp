@@ -51,6 +51,16 @@
     $sql_tinl="select * from #_product where hienthi =1 and id_list in ('".$array."') order by id desc";
     $d->query($sql_tinl);   
     $result_tinl=$d->result_array();    
+
+    $d->reset();
+    $sql_tinll_name1="select * from #_tinloai1_1 where vitri=1 and hienthi = 1 order by stt limit 1";
+    $d->query($sql_tinll_name1); 
+    $result_dinhhuong=$d->fetch_array();  
+
+    $d->reset();
+    $sql_tinll_name2="select * from #_tinloai1_1 where vitri=2 and hienthi = 1 order by stt limit 1";
+    $d->query($sql_tinll_name2); 
+    $result_tuyendung=$d->fetch_array();
 ?>
 <div id="content">
             <script type="text/javascript">
@@ -370,11 +380,11 @@
                 </div>
                 <div class="frame-screen frame3">
                     <div class="wr-canvas img-f3">
-                        <img class="vi change-src" src="images/f3_vi.png" alt="">
+                        <img class="vi change-src" src="upload/tinloai1_1/<?=$result_dinhhuong["thumb"]?>" alt="<?=$result_dinhhuong["ten_vi"]?>" alt="<?=$result_dinhhuong["ten_vi"]?>">
 
                     </div>
                     <div class="gr-btn-h">
-                        <a href="<?php echo $config_url1;?>" class="btn-home">Tìm hiểu thêm</a>
+                        <a href="chi-tiet-giai-phap/<?=$result_dinhhuong["tenkhongdau"]?>-<?=$result_dinhhuong["id"]?>.html" class="btn-home">Tìm hiểu thêm</a>
                     </div>
                     <div class="frame-footer">
                         <p class="f-dax-b t1">
@@ -400,7 +410,7 @@
                         <?php } ?> 
                     </div>
                     <div class="gr-btn-h">
-                        <a href="<?php echo $config_url1;?>" class="btn-home">Tham gia đội ngũ C.ty TNHH PTCNKTTH TRUNG HUY</a>
+                        <a href="chi-tiet-giai-phap/<?=$result_tuyendung["tenkhongdau"]?>-<?=$result_tuyendung["id"]?>.html" class="btn-home">Tham gia đội ngũ C.ty TNHH PTCNKTTH TRUNG HUY</a>
                     </div>
                 </div>
             </div>

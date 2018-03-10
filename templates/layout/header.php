@@ -7,6 +7,25 @@
                     })
                 })
             </script>
+            <script language="javascript"> 
+                    function doEnter(evt){
+                // IE                   // Netscape/Firefox/Opera
+                var key;
+                if(evt.keyCode == 13 || evt.which == 13){
+                    onSearch(evt);
+                }
+                }
+                function onSearch(evt) {
+                        var keyword = document.getElementById("keyword").value;
+                        if(keyword=='')
+                            alert('Bạn chưa nhập tên!');
+                        else{
+                        //var encoded = Base64.encode(keyword);
+                        location.href = "index.php?com=tim-kiem&keyword="+keyword;
+                        loadPage(document.location);            
+                        }
+                }       
+            </script>
             <div class="lg-mb">
                 <input type="hidden" name="clang_link" id="clang_link" value="index.html" />
             </div>
@@ -27,8 +46,9 @@
                     <a href="javascript: void(0);" title="" class="ic-search"></a>
                     <div class="ip-search boxs-pc r">
                         <img src="images/ar-s.png" alt="" />
-                        <form action="https://www.fpt.com.vn/vi/tim-kiem" method="get">
-                            <input type="text" placeholder="T&#236;m kiếm th&#244;ng tin ..." name="q" id="inp_search" />
+                        <form class="fs-fsearch" id=""> 
+                            <input type="text" placeholder="T&#236;m kiếm th&#244;ng tin ..." name="keyword" id="keyword" style="width: 80%;"/>
+                            <button type="button" onclick="onSearch(event,'keyword');">Tìm</button>
                         </form>
                     </div>
                 </div>

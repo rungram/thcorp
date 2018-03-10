@@ -66,7 +66,7 @@
     <script id="twitter-wjs" src="js/widgets.js"></script>
     <script type="text/javascript" src="home/js/jquery-1.9.0.js"></script>
     <script type="text/javascript">
-        var base_url = 'https://www.fpt.com.vn/'; var base_url_lang = 'https://www.fpt.com.vn/vi/'; var lang = 'vi';
+        var base_url = 'http://<?=$config_url?>/'; var base_url_lang = 'http://<?=$config_url?>/vi/'; var lang = 'vi';
         var text_congnghe = 'C&#244;ng nghệ';
         var text_vienthong = 'Viễn th&#244;ng';
         var text_phanphoi_banle = 'Ph&#226;n phối v&#224; b&#225;n lẻ sản phẩm c&#244;ng nghệ';
