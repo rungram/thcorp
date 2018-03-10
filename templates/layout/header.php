@@ -8,7 +8,7 @@
                 })
             </script>
             <div class="lg-mb">
-                <input type="hidden" name="clang_link" id="clang_link" value="https://www.fpt.com.vn/en/" />
+                <input type="hidden" name="clang_link" id="clang_link" value="index.html" />
             </div>
             <div class="ip-search boxs-mb r">
                 <img src="images/ar-s.png" alt="" />
@@ -18,9 +18,9 @@
             </div>
             <a href="javascript: void(0);" title="" class="ic-menu"></a>
             <div class="wr-page">
-                <div class="logo fl"><a href="https://www.fpt.com.vn/vi/" title=""><img src="images/logo.png" alt="" class="w100" /></a></div>
+                <div class="logo fl"><a href="index.html" title=""><img src="images/logo.png" alt="" class="w100" /></a></div>
                 <div class="lag fr">
-                    <a href="https://www.fpt.com.vn/en/" title="" class=" lag-en"></a>
+                    <a href="index.html" title="" class=" lag-en"></a>
                     <a href="javascript:void(0);" title="" class="active lag-vi"></a>
                 </div>
                 <div class="search fr">

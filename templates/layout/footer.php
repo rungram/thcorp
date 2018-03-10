@@ -46,11 +46,17 @@ $result_face=$d->result_array();
                     <div class="clear"></div>
                 </div>
                 <div class="link">
-                    <a href="//<?=$result_face[0]['facebook']?>" target="_blank" class="share ic-fb">&nbsp;</a><a target="_blank" href="../<?=$result_face[0]['youtube']?>" class="share ic-ytb">&nbsp;</a><a target="_blank" href="https://fpt.com.vn/vi/dieu-khoan-su-dung" class="" title="">Điều khoản sử dụng</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a target="_blank" href="https://fpt.com.vn/vi/so-do-website" class="" title="">Sơ đồ website</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://fpt.com.vn/vi/lien-he" class="" title="">Liên hệ &amp; Trợ giúp</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://fpt.com.vn/vi/resources?file=%2Fimages%2Ffiles%2Fthuong-hieu.pdf" title="" target="_blank">Thương hiệu</a>
+                    <a href="//<?=$result_face[0]['facebook']?>" target="_blank" class="share ic-fb">&nbsp;</a>
+                    <a target="_blank" href="../<?=$result_face[0]['youtube']?>" class="share ic-ytb">&nbsp;</a>
+                    <a target="_blank" href="index.html" class="" title="">Điều khoản sử dụng</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a target="_blank" href="index.html" class="" title="">Sơ đồ website</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="index.html" class="" title="">Liên hệ &amp; Trợ giúp</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="index.html" title="" target="_blank">Thương hiệu</a>
                 </div>
                 <div class="bottom-ft-mb">
-                    <a href="https://www.facebook.com/fptcorp" target="_blank" class="share ic-fb">&nbsp;</a><a href="https://www.youtube.com/user/onetvfpt" target="_blank" class="share ic-ytb">&nbsp;</a>
-                    <div class="logo pa"><a href="https://fpt.com.vn/vi/" title=""><img class="w100" src="images/logo-ft.png" alt=""></a></div>
+                    <a href="index.html" target="_blank" class="share ic-fb">&nbsp;</a>
+                    <a href="index.html" target="_blank" class="share ic-ytb">&nbsp;</a>
+                    <div class="logo pa"><a href="index.html" title=""><img class="w100" src="images/logo-ft.png" alt=""></a></div>
                 </div>
             </div>
         </div>

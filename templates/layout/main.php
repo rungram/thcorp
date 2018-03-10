@@ -374,7 +374,7 @@
 
                     </div>
                     <div class="gr-btn-h">
-                        <a href="https://fpt.com.vn/vi/ve-fpt/dinh-huong-cong-nghe" class="btn-home">Tìm hiểu thêm</a>
+                        <a href="<?php echo $config_url1;?>" class="btn-home">Tìm hiểu thêm</a>
                     </div>
                     <div class="frame-footer">
                         <p class="f-dax-b t1">
@@ -400,7 +400,7 @@
                         <?php } ?> 
                     </div>
                     <div class="gr-btn-h">
-                        <a href="https://fpt.com.vn/vi/co-hoi-nghe-nghiep" class="btn-home">Tham gia đội ngũ C.ty TNHH PTCNKTTH TRUNG HUY</a>
+                        <a href="<?php echo $config_url1;?>" class="btn-home">Tham gia đội ngũ C.ty TNHH PTCNKTTH TRUNG HUY</a>
                     </div>
                 </div>
             </div>
@@ -415,19 +415,19 @@
                                 <img class="mb-slide-mb" src="" data-src="images/320_TA.jpg" alt="" title="" />
                             </div>
                             <div class="swiper-slide mb-slider2">
-                                <a href="https://fpt.com.vn/vi/tin-tuc/chi-tiet/fpt-to-chuc-dua-xe-khong-nguoi-lai" title="" target="_blank">
+                                <a href="<?php echo $config_url1;?>" title="" target="_blank">
                                     <img class="mb-slide-tablet" src="" alt="" data-src="images/Cuoc-dua-so-TV-Tablet.jpg" title="" />
                                     <img class="mb-slide-mb" src="" data-src="images/Cuoc-dua-so-TV-Mobile.jpg" alt="" title="" />
                                 </a>
                             </div>
                             <div class="swiper-slide mb-slider3">
-                                <a href="https://fpt.com.vn/vi/tin-tuc/chi-tiet/fpt-nhat-ban-can-moc-doanh-thu-100-trieu-usd" title="" target="_blank">
+                                <a href="<?php echo $config_url1;?>" title="" target="_blank">
                                     <img class="mb-slide-tablet" src="" alt="" data-src="/Images/files/899-x-768_TV(1).jpg" title="" />
                                     <img class="mb-slide-mb" src="" data-src="images/320-x-606_TV(1).jpg" alt="" title="" />
                                 </a>
                             </div>
                             <div class="swiper-slide mb-slider4">
-                                <a href="https://fpt.com.vn/vi/ve-fpt" title="" target="_blank">
+                                <a href="<?php echo $config_url1;?>" title="" target="_blank">
                                     <img class="mb-slide-tablet" src="" alt="" data-src="images/tablet-banner1-opt.jpg" title="" />
                                     <img class="mb-slide-mb" src="" data-src="images/banner-mobile-1.jpg" alt="" title="" />
                                 </a>
