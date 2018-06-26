@@ -420,28 +420,13 @@
                 <div class="banner-mb">
                     <div class="swiper-mobile">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide mb-slider1">
-                                <img class="mb-slide-tablet" src="" data-src="images/768_ta.jpg" alt="" title="" />
-                                <img class="mb-slide-mb" src="" data-src="images/320_TA.jpg" alt="" title="" />
+                        <?php  for($i=0,$count_result_slider=count($result_slider);$i<$count_result_slider;$i++){ 
+                        ?>
+                            <div class="swiper-slide mb-slider<?php echo $i+1;?>">
+                                <img class="mb-slide-tablet" src="<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>" data-src="<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>" alt="<?= _upload_slideshow_l.$result_slider[$i]['ten'] ?>" title="<?= _upload_slideshow_l.$result_slider[$i]['ten'] ?>" />
+                                <img class="mb-slide-mb" src="<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>" data-src="<?= _upload_slideshow_l.$result_slider[$i]['photo'] ?>" alt="<?= _upload_slideshow_l.$result_slider[$i]['ten'] ?>" title="<?= _upload_slideshow_l.$result_slider[$i]['ten'] ?>" />
                             </div>
-                            <div class="swiper-slide mb-slider2">
-                                <a href="<?php echo $config_url1;?>" title="" target="_blank">
-                                    <img class="mb-slide-tablet" src="" alt="" data-src="images/Cuoc-dua-so-TV-Tablet.jpg" title="" />
-                                    <img class="mb-slide-mb" src="" data-src="images/Cuoc-dua-so-TV-Mobile.jpg" alt="" title="" />
-                                </a>
-                            </div>
-                            <div class="swiper-slide mb-slider3">
-                                <a href="<?php echo $config_url1;?>" title="" target="_blank">
-                                    <img class="mb-slide-tablet" src="" alt="" data-src="/Images/files/899-x-768_TV(1).jpg" title="" />
-                                    <img class="mb-slide-mb" src="" data-src="images/320-x-606_TV(1).jpg" alt="" title="" />
-                                </a>
-                            </div>
-                            <div class="swiper-slide mb-slider4">
-                                <a href="<?php echo $config_url1;?>" title="" target="_blank">
-                                    <img class="mb-slide-tablet" src="" alt="" data-src="images/tablet-banner1-opt.jpg" title="" />
-                                    <img class="mb-slide-mb" src="" data-src="images/banner-mobile-1.jpg" alt="" title="" />
-                                </a>
-                            </div>
+                        <?php } ?>
                         </div>
 
                         <!-- btn control -->
@@ -462,7 +447,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="wrap-mb">
-                                                        <img class="" src="<?= _upload_slideshow_l.$result_slider_footer[$i]['photo'] ?>" src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>" alt="" />
+                                                        <img class="" src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>" src="<?= _upload_slideshow_l.$result_slider_content[$i]['photo'] ?>" alt="<?= $result_slider_content[$i]['ten'] ?>" />
                                                         <div class="text">
                                                             <?= $result_slider_content[$i]['ten'] ?>
                                                         </div>
@@ -482,9 +467,13 @@
                 <div class="news-mb">
                     <div class="wrap-mb">
                         <div class="tt f-dax-b">Tin tức</div>
-                        <a class="news-mb-it f-dax" href="https://www.fpt.com.vn/vi/tin-tuc//violympic-chinh-thuc-mo-vong-thi-cap-truong" title="ViOlympic ch&#237;nh thức mở v&#242;ng thi cấp trường">ViOlympic ch&#237;nh thức mở v&#242;ng thi cấp trường</a>
-                        <a class="news-mb-it f-dax" href="https://www.fpt.com.vn/vi/tin-tuc//voi-hon-200-chung-chi-fpt-software-duoc-chung-nhan-dac-biet-tu-aws" title="Với hơn 200 chứng chỉ C.ty TNHH PTCNKTTH TRUNG HUY Software được chứng nhận đặc biệt từ AWS ">Với hơn 200 chứng chỉ C.ty TNHH PTCNKTTH TRUNG HUY Software được chứng nhận đặc biệt từ AWS </a>
-                        <a class="news-mb-it f-dax" href="https://www.fpt.com.vn/vi/tin-tuc//fpt-software-phat-trien-ung-dung-nhac-so-cho-doi-tac-tai-philippines" title="C.ty TNHH PTCNKTTH TRUNG HUY Software ph&#225;t triển ứng dụng nhạc số cho đối t&#225;c tại Philippines ">C.ty TNHH PTCNKTTH TRUNG HUY Software ph&#225;t triển ứng dụng nhạc số cho đối t&#225;c tại Philippines </a>
+                        <?php for($i=0,$count_tl=count($result_tinl);$i<$count_tl;$i++)
+                          { 
+                          ?>
+                          <a class="news-mb-it f-dax" href="tin-tuc-detail/<?=$result_tinl[$i]["tenkhongdau"]?>-<?=$result_tinl[$i]["id"]?>.html" title="<?=$result_tinl[$i]["ten_vi"]?>"><?=$result_tinl[$i]["ten_vi"]?></a>
+                          <?php
+                          }
+                          ?>
                     </div>
                 </div>
                 <div class="home-solution-mb">

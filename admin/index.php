@@ -110,6 +110,9 @@
 		case 'thuvienanh':
 			$source = "thuvienanh";
 			break;	
+		case 'thuvienanhcapcha':
+		    $source = "thuvienanhcapcha";
+		    break;	
 		case 'chayhinh_quangcao':
 			$source = "chayhinh_quangcao";
 			break;	
